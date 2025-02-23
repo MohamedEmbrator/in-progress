@@ -3,8 +3,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Cairo", sans-serif;
-  padding: 0;
-  margin: 0;
 }
 *:focus {
   outline: none;
@@ -27,7 +25,10 @@ a {
 :root {
   --main-color: #ff3946;
   --main-color-alt: #ff3946ed;
+  --dark-color: #212121;
+  --dark-color-alt: #3d444df2;
   --section-background: #ececec;
+  --section-dark-background: #292929;
   --section-padding: 100px;
   --main-transition: 0.4s;
 }
@@ -59,6 +60,9 @@ a {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .settings-box .settings-container .option-box {
   padding: 20px;
@@ -1441,3 +1445,93 @@ footer > p {
   color: #fff;
   font-weight: 300;
 }
+
+/* Start Dark Mode*/
+.settings-box {
+  background-color: var(--dark-color-alt);
+  border-color: #333;
+}
+.dark,
+.dark header {
+  background-color: var(--dark-color);
+}
+.dark header.fixed {
+  background-color: #000;
+}
+.dark .landing::before {
+  background-color: #0000009e;
+}
+.dark header .container .logo {
+  text-shadow: 0.5px 0.5px 5px var(--main-color);
+}
+.dark header .container .navigation ul > li > a {
+  color: #fff;
+}
+.dark header .container .navigation ul > li > a:hover {
+  background-color: transparent;
+}
+.dark .landing .container .content > h2 {
+  color: #fff;
+}
+.dark .landing .container .content > p {
+  color: #eee;
+}
+.dark h2.main-title {
+  color: #fff;
+}
+.dark h2.main-title::before {
+  color: #fafafa;
+}
+.dark .articles .box {
+  border-color: #333;
+}
+.dark .articles .box .content h3 {
+  color: #fff;
+}
+.dark .articles .box .content p {
+  color: #eee;
+}
+.dark .articles .box .info {
+  border-color: #777;
+}
+.dark .gallery,
+.dark .features-sec,
+.dark .testimonials,
+footer {
+  background-color: var(--section-dark-background);
+}
+.dark .spikes {
+  display: none;
+}
+.dark .gallery .container .box {
+  background-color: #444;
+}
+.dark .skills .container .card {
+  box-shadow: 3px 5px 10px #333;
+  border-color: #333;
+}
+.features-sec ul li {
+  background-color: #333;
+  color: #fff;
+}
+.dark .latest-news-content {
+  background-color: transparent;
+}
+.dark .testimonials .container .box {
+  background-color: #333;
+}
+.dark .testimonials .container .box img {
+  border-color: var(--section-dark-background);
+}
+.dark .testimonials .container .box span.title {
+  color: #ccc;
+}
+.dark .testimonials .container .box p {
+  color: #fff;
+}
+.dark .contact .content form .main-input {
+  background-color: var(--dark-color);
+  border-color: #333;
+  color: #fff;
+}
+/* End Dark Mode*/
