@@ -162,15 +162,26 @@ connectionButton.forEach(function (el) {
 const darkModeButtons = document.querySelectorAll(
   ".settings-box .dark-mode span"
 );
-
+let darkModeLocalStorage = window.localStorage.getItem("dark_mode");
+if (darkModeLocalStorage != null) {
+  document.body.classList.add("dark");
+  darkModeButtons.forEach((el) => {
+    el.classList.remove("active");
+    document
+      .querySelector(".settings-box .dark-mode .on")
+      .classList.add("active");
+  });
+}
 darkModeButtons.forEach((el) => {
   el.addEventListener("click", function (e) {
     darkModeButtons.forEach((element) => element.classList.remove("active"));
     e.target.classList.add("active");
     if (e.target.classList.contains("on")) {
       document.body.classList.add("dark");
+      window.localStorage.setItem("dark_mode", "dark");
     } else {
       document.body.classList.remove("dark");
+      window.localStorage.removeItem("dark_mode");
     }
   });
 });
