@@ -158,3 +158,30 @@ connectionButton.forEach(function (el) {
     el.parentElement.style.display = "none";
   });
 });
+// Drak Mode
+const darkModeButtons = document.querySelectorAll(
+  ".settings-box .dark-mode span"
+);
+
+darkModeButtons.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    darkModeButtons.forEach((element) => element.classList.remove("active"));
+    e.target.classList.add("active");
+    if (e.target.classList.contains("on")) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  });
+});
+// Language Switch
+const languageButtons = document.querySelectorAll(
+  ".settings-box .language span"
+);
+
+languageButtons.forEach((el) => {
+  el.addEventListener("click", function (e) {
+    languageButtons.forEach((element) => element.classList.remove("active"));
+    e.target.classList.add("active");
+  });
+});
