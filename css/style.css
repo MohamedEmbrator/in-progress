@@ -122,7 +122,9 @@ a {
   margin-top: 10px;
 }
 .settings-box .random-backgrounds span.active,
-.settings-box .bullets-option span.active {
+.settings-box .bullets-option span.active,
+.settings-box .dark-mode span.active,
+.settings-box .language span.active {
   opacity: 1;
 }
 .settings-box .reset-options {
