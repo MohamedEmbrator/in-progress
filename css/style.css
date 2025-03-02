@@ -194,34 +194,6 @@ button.scroll-button:hover {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--main-color-alt);
 }
-.scroll {
-  width: 40px;
-  height: 40px;
-  position: fixed;
-  right: 25px;
-  bottom: 25px;
-  display: none;
-  z-index: 9999;
-  background: var(--main-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  outline: none;
-  border: none;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  transition: var(--main-transition);
-  -webkit-transition: var(--main-transition);
-  -moz-transition: var(--main-transition);
-  -ms-transition: var(--main-transition);
-  -o-transition: var(--main-transition);
-  font-size: 35px;
-  border-radius: 5px;
-}
-.scroll:hover {
-  background-color: var(--main-color-alt);
-}
 .main-title {
   text-align: center;
   font-weight: normal;
