@@ -98,6 +98,11 @@ allLis.forEach(function (e) {
     navigatinBar.classList.remove("show");
   };
 });
+document.addEventListener("click", function (event) {
+  if (!navigatinBar.contains(event.target) && !btn.contains(event.target)) {
+    navigatinBar.classList.remove("show");
+  }
+});
 let copyRight = document.querySelector("footer .container .footer-title sub");
 
 copyRight.innerHTML = new Date().getFullYear();
@@ -193,7 +198,6 @@ fetch(
 )
   .then((result) => result.json())
   .then((data) => {
-    console.log(data.items);
     data.items.forEach(function (post) {
       const articles = document.querySelector(".articles .container");
       const mainBox = document.createElement("div");
