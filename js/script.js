@@ -98,30 +98,6 @@ allLis.forEach(function (e) {
     navigatinBar.classList.remove("show");
   };
 });
-
-let scrollbtn = document.querySelector(".scroll");
-
-window.onscroll = function () {
-  if (window.scrollY >= 150) {
-    navigatin.classList.add("fixed");
-  } else {
-    navigatin.classList.remove("fixed");
-  }
-  if (window.scrollY >= 600) {
-    scrollbtn.style.display = "flex";
-  } else {
-    scrollbtn.style.display = "none";
-  }
-};
-
-scrollbtn.onclick = function () {
-  window.scrollTo({
-    left: 0,
-    top: 0,
-    behavior: "smooth"
-  });
-};
-
 let copyRight = document.querySelector("footer .container .footer-title sub");
 
 copyRight.innerHTML = new Date().getFullYear();
