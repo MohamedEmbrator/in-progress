@@ -407,6 +407,9 @@ header .container .navigation ul.show {
   header .container .navigation ul li:not(:last-child) {
     border-bottom: 1px solid #00000061;
   }
+  .dark header .container .navigation ul li:not(:last-child) {
+    border-color: #777;
+  }
   header .container .navigation ul li {
     width: 100%;
     display: flex;
@@ -417,6 +420,10 @@ header .container .navigation ul.show {
     width: 100%;
     font-weight: 700;
     font-size: 25px;
+  }
+  header .container .navigation ul > li > a::before {
+    top: initial;
+    bottom: 0;
   }
 }
 /* End Header  */
@@ -654,7 +661,7 @@ header .container .navigation ul.show {
   -o-box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 15px;
   border: 1px solid #eee;
-  max-height: 360px;
+  max-height: 440px;
 }
 .articles .container .box:hover {
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 15px;
@@ -678,6 +685,8 @@ header .container .navigation ul.show {
 }
 .articles .box .content h3 {
   margin: 0;
+  line-height: 1.6;
+  text-align: center;
 }
 .articles .box .content p {
   font-size: 14px;
@@ -1535,6 +1544,12 @@ footer {
 .dark .spikes {
   display: none;
 }
+.dark header .container .btn {
+  color: #fff;
+}
+.dark header .container .navigation ul.show {
+  background-color: var(--section-dark-background);
+}
 .dark .gallery .container .box {
   background-color: #444;
 }
@@ -1544,6 +1559,9 @@ footer {
 }
 .dark .features-sec ul li {
   background-color: #333;
+  color: #fff;
+}
+.dark .skills .container .card .content > h3 {
   color: #fff;
 }
 .dark .latest-news-content {
@@ -1559,6 +1577,9 @@ footer {
   color: #ccc;
 }
 .dark .testimonials .container .box p {
+  color: #fff;
+}
+.dark .latest-news-content ul li {
   color: #fff;
 }
 .dark .contact .content form .main-input {
