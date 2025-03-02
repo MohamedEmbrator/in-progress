@@ -1,5 +1,11 @@
 const scrollButton = document.querySelector(".scroll-button");
+const scrollProgressParentElement = document.querySelector(".scroll-progress");
+const scrollProgress = document.querySelector(".scroll-progress div");
 window.onscroll = () => {
+  scrollProgressParentElement.style.display = "block";
+  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let scrollTop = document.documentElement.scrollTop;
+  scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
   if (window.scrollY >= 600) {
     scrollButton.style.display = "flex";
   } else {
@@ -83,11 +89,7 @@ document.querySelector(".reset-options").onclick = function () {
 // Other
 const btn = document.querySelector("header .container .btn");
 const navigatinBar = document.querySelector("header .container .navigation ul");
-let navigatin = document.getElementById("header");
 const allLis = document.querySelectorAll("header .container .navigation ul li");
-const scrollProgress = document.querySelector(".scroll-height");
-const totalHeight = document.body.scrollHeight - window.innerHeight;
-const scrollProgressDiv = document.querySelector(".scroll-height > div");
 
 btn.addEventListener("click", function () {
   navigatinBar.classList.toggle("show");
