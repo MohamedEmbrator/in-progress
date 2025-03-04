@@ -236,28 +236,3 @@ fetch(
       articles.appendChild(mainBox);
     });
   });
-const mainTitle = document.querySelectorAll(".main-title");
-const skills = document.querySelectorAll(
-  ".skills .container .card .content > h3"
-);
-fetch("data.json")
-  .then((resolve) => resolve.json())
-  .then((data) => {
-    document.querySelector("header .container .logo").innerHTML =
-      data.logoTitle;
-    document.querySelector(".landing .container .content > h2").innerHTML =
-      data.landingHeading;
-    document.querySelector(".landing .container .content > p").innerHTML =
-      data.landingDescription;
-    mainTitle[0].innerHTML = data.section_one_title;
-    mainTitle[1].innerHTML = data.section_two_title;
-    mainTitle[2].innerHTML = data.section_three_title;
-    mainTitle[3].innerHTML = data.section_four_title;
-    mainTitle[4].innerHTML = data.section_five_title;
-    mainTitle[5].innerHTML = data.section_six_title;
-    mainTitle[6].innerHTML = data.section_seven_title;
-    skills[0].innerHTML = data.skill_one;
-    skills[1].innerHTML = data.skill_two;
-    skills[2].innerHTML = data.skill_three;
-    skills[3].innerHTML = data.skill_four;
-  });
