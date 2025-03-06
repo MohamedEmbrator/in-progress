@@ -1416,3 +1416,168 @@ footer {
   color: #fff;
 }
 /* End Dark Mode*/
+/* Login Form*/
+.spikes,
+section,
+header,
+.landing,
+footer,
+.settings-box,
+.scroll-progress,
+button.scroll-button {
+  display: none;
+} 
+body:has(.container.form) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://github.com/MohamedEmbrator/Login_Form/blob/main/imgs/img.jpg?raw=true") no-repeat;
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+}
+.container.form {
+  width: 420px;
+  background-color: transparent;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 30px 40px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  backdrop-filter: blur(20px);
+}
+.container.form form > h1 {
+  font-size: 36px;
+  text-align: center;
+}
+.container form > .input-field {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  margin: 30px 0;
+}
+.container form > .input-field input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  font-size: 18px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.container form > .input-field input::placeholder {
+  color: #fff;
+}
+.container form > .input-field i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.container form .remember-forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -15px 0 15px;
+  font-size: 16px;
+}
+.container form .remember-forget label input {
+  margin-left: 3px;
+  accent-color: #fff;
+}
+.container form .remember-forget a {
+  text-decoration: none;
+  color: white;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+}
+.container form .remember-forget a:hover {
+  text-decoration: underline;
+}
+.container .btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  color: #333;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -ms-transition: 0.7s;
+  -o-transition: 0.7s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container .btn:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+.register-link {
+  text-align: center;
+  margin: 20px 0 15px;
+  font-size: 16px;
+}
+.register-link p a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+.register-link p a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 350px) and (max-width: 500px) {
+  .container {
+    width: 340px;
+    padding: 20px 30px;
+  }
+  .container form .remember-forget {
+    font-size: 14px;
+  }
+}
+@media (max-width: 349px) {
+  .container {
+    width: 270px;
+    padding: 10px 15px;
+  }
+  .container form .remember-forget {
+    font-size: 15px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .register-link {
+    line-height: 1.6;
+  }
+}
+/* Login Form*/
