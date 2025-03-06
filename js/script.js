@@ -1,9 +1,44 @@
+let users = ["rokaya", "mohamed"];
+const username = document.querySelector(".container form > .input-field input");
+const password = document.querySelector(
+  ".container form > .input-field input[type='password']"
+);
+document.querySelector(".container.form .btn").onclick = function (e) {
+  e.preventDefault();
+  if (users.includes(username.value) && password.value === "rokaya20051002rokaya") {
+    document.querySelector(".container.form").remove();
+    document
+      .querySelectorAll("section")
+      .forEach((el) => (el.style.display = "block"));
+    document.querySelector(".spikes").style.display = "block";
+    document.getElementById("header").style.display = "block";
+    document.querySelector("footer").style.display = "block";
+    document.querySelector(".landing").style.display = "block";
+    document.querySelector(".settings-box").style.display = "block";
+    document.querySelector(".scroll-progress").style.display = "block";
+  } else {
+    document
+      .getElementsByTagName("section")
+      .forEach((el) => (el.style.display = "none"));
+    document.querySelector(".spikes").style.display = "none";
+    document.getElementById("header").style.display = "none";
+    document.querySelector("footer").style.display = "none";
+    document.querySelector(".landing").style.display = "none";
+    document.querySelector(".settings-box").style.display = "none";
+    document.querySelector(".scroll-progress").style.display = "none";
+    document.querySelector(".button.scroll-button").style.display = "none";
+  }
+};
+
+// ------------------------------------------------------------------
 const scrollButton = document.querySelector(".scroll-button");
 const scrollProgressParentElement = document.querySelector(".scroll-progress");
 const scrollProgress = document.querySelector(".scroll-progress div");
 window.onscroll = () => {
   scrollProgressParentElement.style.display = "block";
-  let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
   let scrollTop = document.documentElement.scrollTop;
   scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
   if (window.scrollY >= 600) {
